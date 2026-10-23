@@ -1,0 +1,237 @@
+/* =========================================================
+   ESTILOS DE LA WEB DE PIA
+   Los colores se cambian acá arriba y se aplican en toda la web.
+   ========================================================= */
+:root {
+  --crema:   #FFF4E8;   /* fondo general */
+  --tinta:   #22101F;   /* texto */
+  --fucsia:  #FF2D87;   /* color principal */
+  --naranja: #FF8A1F;   /* segundo color */
+  --lila:    #C8B5FF;
+  --menta:   #B5F0D3;
+  --amarillo:#FFE066;
+
+  --titulos: "Bricolage Grotesque", system-ui, sans-serif;
+  --texto:   "DM Sans", system-ui, sans-serif;
+  --radio: 22px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; overflow-x: clip; }
+body {
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--texto);
+  font-size: 17px;
+  line-height: 1.55;
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { font-family: var(--titulos); line-height: 1; letter-spacing: -0.02em; }
+
+/* ---------- Menú ---------- */
+.menu {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px clamp(16px, 4vw, 48px);
+  background: rgba(255, 244, 232, .88);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid var(--tinta);
+}
+.logo { font-family: var(--titulos); font-weight: 800; font-size: 22px; text-decoration: none; letter-spacing: .02em; }
+.logo span { color: var(--fucsia); margin-left: 4px; }
+.menu nav { display: flex; gap: 22px; align-items: center; }
+.menu nav a { text-decoration: none; font-weight: 500; }
+.menu nav a:hover { color: var(--fucsia); }
+.boton-menu { background: var(--tinta); color: var(--crema) !important; padding: 8px 16px; border-radius: 99px; }
+
+/* ---------- Botones ---------- */
+.botones { display: flex; flex-wrap: wrap; gap: 12px; }
+.boton {
+  display: inline-block; cursor: pointer;
+  font: 700 16px var(--texto);
+  padding: 14px 26px; border-radius: 99px;
+  background: var(--fucsia); color: #fff; text-decoration: none;
+  border: 2px solid var(--tinta);
+  box-shadow: 4px 4px 0 var(--tinta);
+  transition: transform .15s, box-shadow .15s;
+}
+.boton:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--tinta); }
+.boton-borde { background: var(--crema); color: var(--tinta); }
+.boton-oscuro { background: var(--tinta); color: #fff; }
+.boton-blanco { background: #fff; color: var(--tinta); }
+
+.etiqueta {
+  display: inline-block;
+  font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .12em;
+  color: var(--fucsia); margin-bottom: 12px;
+}
+
+/* ---------- Fotos (con fondo de color si todavía no hay foto) ---------- */
+.foto {
+  position: relative; overflow: hidden;
+  border-radius: var(--radio);
+  border: 2px solid var(--tinta);
+  background: linear-gradient(135deg, var(--fucsia), var(--naranja));
+}
+.foto::after {
+  content: "📷 " attr(data-foto);
+  position: absolute; inset: auto 0 12px 0; text-align: center;
+  font-size: 13px; font-weight: 700; color: rgba(255,255,255,.9);
+}
+.foto img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Portada ---------- */
+.portada {
+  display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(32px, 6vw, 80px) clamp(16px, 4vw, 48px);
+  max-width: 1280px; margin: 0 auto;
+}
+.portada h1 {
+  font-size: clamp(76px, 13vw, 180px); font-weight: 800; text-transform: uppercase;
+  line-height: .88; margin-bottom: 20px;
+}
+.portada h1 em { font-style: normal; color: var(--fucsia); -webkit-text-stroke: 2px var(--tinta); }
+.roles { font-family: var(--titulos); font-weight: 700; font-size: clamp(18px, 2vw, 22px); margin-bottom: 14px; }
+.bajada { max-width: 46ch; margin-bottom: 28px; }
+.portada-foto { position: relative; }
+.portada-foto .foto { aspect-ratio: 4 / 5; transform: rotate(2deg); box-shadow: 10px 10px 0 var(--tinta); }
+.sticker {
+  position: absolute; z-index: 2;
+  font-family: var(--titulos); font-weight: 800; text-align: center; line-height: 1.05;
+  border: 2px solid var(--tinta); border-radius: 99px;
+}
+.sticker-1 {
+  top: -18px; left: -22px; width: 110px; height: 110px;
+  display: grid; place-items: center;
+  background: var(--amarillo); font-size: 18px; transform: rotate(-12deg);
+}
+.sticker-2 { bottom: 26px; right: -14px; background: var(--menta); padding: 8px 18px; font-size: 18px; transform: rotate(6deg); }
+
+/* ---------- Cinta de marcas ---------- */
+.cinta {
+  overflow: hidden; background: var(--tinta); color: var(--crema);
+  border-block: 2px solid var(--tinta);
+  transform: rotate(-1.5deg); margin: 20px -10px;
+}
+.cinta-mueve { display: flex; width: max-content; animation: cinta 30s linear infinite; }
+.cinta-grupo { display: flex; }
+.cinta span {
+  font-family: var(--titulos); font-weight: 700; font-size: 24px;
+  padding: 14px 0; white-space: nowrap;
+}
+.cinta span::after { content: "✦"; color: var(--fucsia); margin: 0 26px; }
+@keyframes cinta { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .cinta-mueve { animation: none; } }
+
+/* ---------- Números ---------- */
+.numeros {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  max-width: 1280px; margin: 0 auto; padding: 48px clamp(16px, 4vw, 48px) 0;
+}
+.numeros div { border-top: 2px solid var(--tinta); padding-top: 12px; }
+.numeros strong { display: block; font-family: var(--titulos); font-size: clamp(34px, 5vw, 54px); color: var(--fucsia); line-height: 1; }
+.numeros span { font-size: 15px; }
+
+/* ---------- Secciones ---------- */
+.seccion { max-width: 1280px; margin: 0 auto; padding: clamp(56px, 9vw, 110px) clamp(16px, 4vw, 48px); }
+.titulo-seccion { max-width: 640px; margin-bottom: 32px; }
+.titulo-seccion h2, .sobre-mi h2, .contacto h2 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; margin-bottom: 14px; }
+
+/* ---------- Trabajos ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.filtro {
+  cursor: pointer; font: 500 15px var(--texto);
+  padding: 9px 18px; border-radius: 99px;
+  border: 2px solid var(--tinta); background: transparent; color: var(--tinta);
+}
+.filtro.activo, .filtro:hover { background: var(--tinta); color: var(--crema); }
+
+.grilla { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px 20px; }
+.trabajo .foto { aspect-ratio: 4 / 5; margin-bottom: 14px; transition: transform .2s; }
+.trabajo:nth-child(4n+2) .foto { background: linear-gradient(135deg, var(--naranja), var(--amarillo)); }
+.trabajo:nth-child(4n+3) .foto { background: linear-gradient(135deg, var(--lila), var(--fucsia)); }
+.trabajo:nth-child(4n+4) .foto { background: linear-gradient(135deg, var(--menta), var(--lila)); }
+.trabajo:hover .foto { transform: rotate(-1.5deg) scale(1.02); }
+.trabajo h3 { font-size: 22px; margin-bottom: 6px; }
+.trabajo p { font-size: 15px; margin-bottom: 8px; }
+.ver { font-weight: 700; color: var(--fucsia); text-decoration: none; font-size: 15px; }
+.ver:hover { text-decoration: underline; }
+.trabajo.oculto { display: none; }
+
+/* ---------- Servicios ---------- */
+.tarjetas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 36px; }
+.tarjeta { padding: 26px 22px; border: 2px solid var(--tinta); border-radius: var(--radio); box-shadow: 5px 5px 0 var(--tinta); }
+.tarjeta h3 { font-size: 24px; margin: 14px 0 10px; }
+.tarjeta p { font-size: 15.5px; }
+.icono {
+  display: grid; place-items: center; width: 46px; height: 46px;
+  background: var(--crema); border: 2px solid var(--tinta); border-radius: 50%; font-size: 18px;
+}
+.t-fucsia { background: var(--fucsia); color: #fff; }
+.t-fucsia .icono { color: var(--tinta); }
+.t-naranja { background: var(--naranja); }
+.t-lila { background: var(--lila); }
+.t-menta { background: var(--menta); }
+
+/* ---------- Sobre mí ---------- */
+.sobre-mi { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(28px, 6vw, 80px); align-items: center; }
+.foto-redonda { aspect-ratio: 1; border-radius: 50%; box-shadow: 10px 10px 0 var(--fucsia); }
+.foto-redonda::after { bottom: 45%; }
+.sobre-mi p { margin-bottom: 14px; max-width: 58ch; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.chips li { padding: 6px 14px; border-radius: 99px; background: #fff; border: 2px solid var(--tinta); font-weight: 500; font-size: 14px; }
+
+/* ---------- Contacto ---------- */
+.contacto { padding: 0 clamp(16px, 4vw, 48px) clamp(56px, 9vw, 110px); }
+.contacto-caja {
+  max-width: 1184px; margin: 0 auto;
+  background: var(--fucsia); color: #fff;
+  border: 2px solid var(--tinta); border-radius: 32px; box-shadow: 10px 10px 0 var(--tinta);
+  padding: clamp(28px, 6vw, 72px);
+}
+.contacto .etiqueta { color: var(--amarillo); }
+.contacto-caja > p { margin-bottom: 26px; font-size: 18px; }
+form { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 760px; }
+form textarea, form .botones { grid-column: 1 / -1; }
+input, textarea {
+  font: 16px var(--texto); color: var(--tinta);
+  padding: 14px 18px; border-radius: 16px; border: 2px solid var(--tinta); background: #fff;
+  resize: vertical; width: 100%;
+}
+.redes { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 32px; }
+.redes a { font-weight: 700; }
+
+/* ---------- Pie ---------- */
+.pie {
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  padding: 22px clamp(16px, 4vw, 48px); border-top: 2px solid var(--tinta);
+  font-family: var(--titulos); font-weight: 700;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 980px) {
+  .grilla, .tarjetas { grid-template-columns: repeat(2, 1fr); }
+  .numeros { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 680px) {
+  body { font-size: 16px; }
+  .menu nav a:not(.boton-menu) { display: none; }
+  .portada { grid-template-columns: 1fr; padding-top: 28px; }
+  .portada-foto { order: -1; margin: 18px 12px 8px; }
+  .sticker-1 { width: 88px; height: 88px; font-size: 15px; left: -8px; }
+  .sticker-2 { right: -6px; font-size: 16px; }
+  .grilla { gap: 22px 14px; }
+  .trabajo h3 { font-size: 18px; }
+  .trabajo p { font-size: 14px; }
+  .tarjetas { grid-template-columns: 1fr; }
+  .sobre-mi { grid-template-columns: 1fr; }
+  .foto-redonda { max-width: 280px; }
+  form { grid-template-columns: 1fr; }
+  .contacto-caja .boton { flex: 1 1 100%; text-align: center; }
+  .cinta span { font-size: 19px; }
+}
