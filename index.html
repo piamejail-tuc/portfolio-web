@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pia Mejail | Creadora de contenido, modelo y host</title>
+  <meta name="description" content="Pia Mejail: creadora de contenido digital, modelo publicitaria y host de eventos en Yerba Buena, Tucumán. Trabajos con marcas y contacto.">
+  <meta property="og:title" content="Pia Mejail | Creadora de contenido">
+  <meta property="og:description" content="Contenido para marcas, modelo publicitaria y host de eventos. Yerba Buena, Tucumán.">
+  <meta property="og:image" content="https://piamejail.com/img/portada.jpg">
+  <meta name="theme-color" content="#FF2D87">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<!-- ============ MENÚ ============ -->
+<header class="menu">
+  <a href="#inicio" class="logo">PIA MEJAIL<span>✦</span></a>
+  <nav>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto" class="boton-menu">Contacto</a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+<!-- ============ PORTADA ============
+     La foto grande es img/portada.jpg (vertical, ideal 1200x1500).
+     Si todavía no está, se ve un fondo de color. -->
+<section class="portada">
+  <div class="portada-texto">
+    <p class="etiqueta">Yerba Buena, Tucumán</p>
+    <h1>Pia<br><em>Mejail</em></h1>
+    <p class="roles">Creadora de contenido · Modelo publicitaria · Host de eventos</p>
+    <p class="bajada">Hago contenido que la gente mira hasta el final: reels, TikToks y campañas para marcas que quieren hablarle a Tucumán con cercanía y onda.</p>
+    <div class="botones">
+      <a href="#trabajos" class="boton">Ver trabajos</a>
+      <a href="#contacto" class="boton boton-borde">Escribime</a>
+    </div>
+  </div>
+  <div class="portada-foto">
+    <div class="foto" data-foto="img/portada.jpg">
+      <img src="img/portada.jpg" alt="Pia Mejail" onerror="this.remove()">
+    </div>
+    <span class="sticker sticker-1">+5 años<br>creando</span>
+    <span class="sticker sticker-2">@piamejail</span>
+  </div>
+</section>
+
+<!-- ============ CINTA DE MARCAS ============
+     Para agregar una marca, sumá un <span> en los DOS grupos (así la cinta no se corta). -->
+<div class="cinta" aria-label="Marcas con las que trabajé">
+  <div class="cinta-mueve">
+    <div class="cinta-grupo">
+      <span>Gloss Perfumerías</span><span>El Solar del Cerro</span><span>Dos Coronas</span><span>Celtuc</span><span>Schujman</span><span>Municipalidad de Yerba Buena</span><span>Zanna's Run</span>
+    </div>
+    <div class="cinta-grupo" aria-hidden="true">
+      <span>Gloss Perfumerías</span><span>El Solar del Cerro</span><span>Dos Coronas</span><span>Celtuc</span><span>Schujman</span><span>Municipalidad de Yerba Buena</span><span>Zanna's Run</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NÚMEROS ============
+     Cambiá los XX por tus números reales. -->
+<section class="numeros">
+  <div><strong>XX K</strong><span>seguidores en @piamejail</span></div>
+  <div><strong>XX K</strong><span>seguidores en @descubriyb</span></div>
+  <div><strong>XX K</strong><span>seguidores en TikTok</span></div>
+  <div><strong>2020</strong><span>creando contenido desde</span></div>
+</section>
+
+<!-- ============ TRABAJOS ============
+     Cada trabajo es un bloque <article>. Para sumar uno, copiá un bloque entero y cambiá:
+     - data-cat: marcas / eventos / propio (para los filtros)
+     - la foto: poné el archivo en la carpeta img con ese nombre
+     - el link al reel o TikTok (si no hay, borrá la línea del link) -->
+<section class="seccion" id="trabajos">
+  <div class="titulo-seccion">
+    <p class="etiqueta">Portfolio</p>
+    <h2>Trabajos con marcas</h2>
+    <p>Elegí una categoría o mirá todo junto.</p>
+  </div>
+
+  <div class="filtros">
+    <button class="filtro activo" data-filtro="todo">Todo</button>
+    <button class="filtro" data-filtro="marcas">Contenido para marcas</button>
+    <button class="filtro" data-filtro="eventos">Host de eventos</button>
+    <button class="filtro" data-filtro="propio">Proyectos propios</button>
+  </div>
+
+  <div class="grilla">
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/gloss-1.jpg"><img src="img/gloss-1.jpg" alt="Contenido para Gloss Perfumerías" onerror="this.remove()"></div>
+      <h3>Gloss Perfumerías</h3>
+      <p>Reels para su perfil, algunos también pautados.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/solar-1.jpg"><img src="img/solar-1.jpg" alt="Contenido para El Solar del Cerro" onerror="this.remove()"></div>
+      <h3>El Solar del Cerro</h3>
+      <p>Contenido mensual para las campañas y los locales del shopping.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/doscoronas-1.jpg"><img src="img/doscoronas-1.jpg" alt="Contenido para Dos Coronas" onerror="this.remove()"></div>
+      <h3>Dos Coronas</h3>
+      <p>Videos de colaboración para la marca de ropa.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/celtuc-1.jpg"><img src="img/celtuc-1.jpg" alt="Contenido para Celtuc" onerror="this.remove()"></div>
+      <h3>Celtuc</h3>
+      <p>Videos protagonizados por mí, también usados en pauta.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/schujman-1.jpg"><img src="img/schujman-1.jpg" alt="Contenido para Schujman" onerror="this.remove()"></div>
+      <h3>Schujman</h3>
+      <p>Videos con mi participación para la marca.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="marcas">
+      <div class="foto" data-foto="img/yerbabuena-1.jpg"><img src="img/yerbabuena-1.jpg" alt="Contenido para la Municipalidad de Yerba Buena" onerror="this.remove()"></div>
+      <h3>Municipalidad de Yerba Buena</h3>
+      <p>Contenido para la comunicación del municipio desde 2021.</p>
+      <a href="#" class="ver">Ver reel →</a>
+    </article>
+
+    <article class="trabajo" data-cat="eventos">
+      <div class="foto" data-foto="img/zannas-1.jpg"><img src="img/zannas-1.jpg" alt="Pia como host en Zanna's Run" onerror="this.remove()"></div>
+      <h3>Zanna's Run</h3>
+      <p>Conducción y animación de la carrera.</p>
+      <a href="#" class="ver">Ver video →</a>
+    </article>
+
+    <article class="trabajo" data-cat="propio">
+      <div class="foto" data-foto="img/descubriyb-1.jpg"><img src="img/descubriyb-1.jpg" alt="Cuenta @descubriyb" onerror="this.remove()"></div>
+      <h3>@descubriyb</h3>
+      <p>Mi cuenta de gastronomía, paseos y eventos en Yerba Buena y alrededores.</p>
+      <a href="https://instagram.com/descubriyb" class="ver" target="_blank" rel="noopener">Ver cuenta →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="seccion servicios" id="servicios">
+  <div class="titulo-seccion">
+    <p class="etiqueta">Qué hago</p>
+    <h2>Cada marca tiene su ritmo</h2>
+    <p>Contame qué querés contar y lo armamos desde la idea hasta la publicación.</p>
+  </div>
+
+  <div class="tarjetas">
+    <div class="tarjeta t-fucsia">
+      <span class="icono">▶</span>
+      <h3>Contenido para marcas</h3>
+      <p>Reels y TikToks pensados para redes: idea, guion, grabación y edición. Para tu perfil o el mío.</p>
+    </div>
+    <div class="tarjeta t-naranja">
+      <span class="icono">✦</span>
+      <h3>Modelo publicitaria</h3>
+      <p>Campañas, fotos y videos para pauta. Pongo la cara y la onda para que tu marca se vea bien.</p>
+    </div>
+    <div class="tarjeta t-lila">
+      <span class="icono">◎</span>
+      <h3>Host de eventos</h3>
+      <p>Conducción y animación de eventos deportivos y de marca, con experiencia en TV.</p>
+    </div>
+    <div class="tarjeta t-menta">
+      <span class="icono">❋</span>
+      <h3>Producciones completas</h3>
+      <p>Videos con equipo audiovisual profesional, de la idea a la entrega final.</p>
+    </div>
+  </div>
+
+  <a href="#contacto" class="boton">Contame tu idea</a>
+</section>
+
+<!-- ============ SOBRE MÍ ============
+     Foto: img/sobre-mi.jpg -->
+<section class="seccion sobre-mi" id="sobre-mi">
+  <div class="foto foto-redonda" data-foto="img/sobre-mi.jpg">
+    <img src="img/sobre-mi.jpg" alt="Pia Mejail" onerror="this.remove()">
+  </div>
+  <div>
+    <p class="etiqueta">Sobre mí</p>
+    <h2>Hola, soy Pia</h2>
+    <p>Soy arquitecta recibida en la UNT y creo contenido desde 2020. Desde 2021 hago contenido para la Municipalidad de Yerba Buena y trabajo con marcas de Tucumán que quieren mostrarse de forma cercana y real.</p>
+    <p>Pasé por la TV local como entrevistadora en ShowOn y Show Online, y con una columna de redes en el noticiero de EN VIVO TV. Hoy también conduzco eventos y tengo mi propia cuenta, @descubriyb, donde muestro lo mejor de Yerba Buena.</p>
+    <ul class="chips">
+      <li>Arquitecta UNT</li>
+      <li>TV local</li>
+      <li>Maquilladora</li>
+      <li>Inglés fluido</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============
+     Para cambiar el mail o el WhatsApp, editá las dos líneas de abajo (data-mail y data-whatsapp).
+     El WhatsApp va con código de país, sin + ni espacios: 549381XXXXXXX -->
+<section class="contacto" id="contacto">
+  <div class="contacto-caja">
+    <p class="etiqueta">Contacto</p>
+    <h2>Hagamos algo juntos!</h2>
+    <p>Contame qué tenés en mente y te respondo a la brevedad.</p>
+
+    <form id="formulario"
+          data-mail="piamejail@gmail.com"
+          data-whatsapp="549381XXXXXXX">
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="text" name="marca" placeholder="Marca o empresa">
+      <textarea name="mensaje" rows="4" placeholder="Contame tu idea" required></textarea>
+      <div class="botones">
+        <button type="submit" class="boton boton-oscuro" data-via="mail">Enviar por mail</button>
+        <button type="submit" class="boton boton-blanco" data-via="whatsapp">Enviar por WhatsApp</button>
+      </div>
+    </form>
+
+    <div class="redes">
+      <a href="https://instagram.com/piamejail" target="_blank" rel="noopener">Instagram @piamejail</a>
+      <a href="https://instagram.com/descubriyb" target="_blank" rel="noopener">Instagram @descubriyb</a>
+      <a href="https://www.tiktok.com/@piamejail" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <span>PIA MEJAIL ✦ Yerba Buena, Tucumán</span>
+  <span>© 2026</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
